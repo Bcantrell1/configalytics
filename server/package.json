@@ -1,0 +1,33 @@
+{
+  "name": "configalytics-backend",
+  "version": "0.0.1",
+  "description": "Tool for automating configuration and setup of website tracking services from google",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rimraf dist && babel app --out-dir dist --copy-files",
+    "start": "nodemon --exec node_modules/.bin/babel-node app/index.ts",
+    "test": "jest"
+  },
+  "author": "Brian Cantrell",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/node": "^7.26.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "babel-jest": "^29.7.0",
+    "cors": "^2.8.5",
+    "eslint": "^9.24.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "googleapis": "^148.0.0",
+    "mysql2": "^3.14.0"
+  },
+  "keywords": []
+}
