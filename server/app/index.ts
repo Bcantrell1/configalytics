@@ -16,13 +16,12 @@ const startAPI = async (): Promise<void> => {
 
     app.use(express.json());
 
-	try {
-
-		await databaseConnection.checkConnection()
-		console.log("Connection made to the DB");
-	} catch (e) {
-		console.error('Test connection failed', e);
-	}
+    try {
+        await databaseConnection.checkConnection();
+        console.log('Connection made to the DB');
+    } catch (e) {
+        console.error('Test connection failed', e);
+    }
 
     app.get('/', (req: Request, res: Response) => {
         res.send({ data: 'Hello, World!' });
