@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "Tool for automating configuration and setup of website tracking services from google",
     "main": "index.ts",
+		"type": "module",
     "scripts": {
         "build": "rimraf dist && babel app --out-dir dist --copy-files",
         "start": "nodemon --exec node_modules/.bin/babel-node app/index.ts",
